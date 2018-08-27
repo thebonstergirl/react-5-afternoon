@@ -1,4 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, compose} from 'redux';
 import reducer from './ducks/reducer';
 
-export default createStore(reducer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const middlewares = composeEnhancers();
+
+export default createStore(reducer, middlewares);
