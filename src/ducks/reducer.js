@@ -81,10 +81,10 @@ export const updateCost = (cost) => {
         payload: cost
     }
 }
-export const updatePayment = (payment) => {
+export const updatePayment = (downPayment) => {
     return {
         type: UPDATE_PAYMENT,
-        payload: payment
+        payload: downPayment
     }
 }
 export const updateCredit = (credit) => {
